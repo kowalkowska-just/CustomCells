@@ -14,6 +14,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        table.register(CustomTableViewCellWithImage.nib(), forCellReuseIdentifier: CustomTableViewCellWithImage.identifier)
+        
         table.delegate = self
         table.dataSource = self
     }
@@ -26,6 +28,13 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
+        if indexPath.row > 2 {
+            let customCell = tableView.dequeueReusableCell(withIdentifier: CustomTableViewCellWithImage.identifier, for: indexPath) as! CustomTableViewCellWithImage
+            customCell.configure(with: "Custom Cell with Image", imageName: "alarm")
+            return customCell
+        }
+
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = "Hello World \(indexPath.row+1)"
         
@@ -37,6 +46,10 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 70
+    }
+    
     @objc func didChangeSwitch(_ sender: UISwitch) {
     
         if sender.isOn {
@@ -44,7 +57,6 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         } else {
             print("Its now off.")
         }
-        
     }
     
 }
