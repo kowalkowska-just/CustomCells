@@ -15,6 +15,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         table.register(CustomTableViewCellWithImage.nib(), forCellReuseIdentifier: CustomTableViewCellWithImage.identifier)
+        table.register(CustomTableViewCellWithField.nib(), forCellReuseIdentifier: CustomTableViewCellWithField.identifier)
         
         table.delegate = self
         table.dataSource = self
@@ -24,14 +25,21 @@ class ViewController: UIViewController {
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return 9
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
+        if indexPath.row > 5 {
+            let fieldCell = tableView.dequeueReusableCell(withIdentifier: CustomTableViewCellWithField.identifier, for: indexPath) as! CustomTableViewCellWithField
+            
+            return fieldCell
+        }
+        
         if indexPath.row > 2 {
             let customCell = tableView.dequeueReusableCell(withIdentifier: CustomTableViewCellWithImage.identifier, for: indexPath) as! CustomTableViewCellWithImage
             customCell.configure(with: "Custom Cell with Image", imageName: "alarm")
+            
             return customCell
         }
 
