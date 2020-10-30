@@ -17,8 +17,6 @@ class ViewController: UIViewController {
         table.delegate = self
         table.dataSource = self
     }
-
-
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
@@ -31,7 +29,22 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = "Hello World \(indexPath.row+1)"
         
+        let mySwitch = UISwitch()
+        mySwitch.addTarget(self, action: #selector(didChangeSwitch(_:)), for: .valueChanged)
+        mySwitch.isOn = true
+        cell.accessoryView = mySwitch
+                
         return cell
     }
-
+    
+    @objc func didChangeSwitch(_ sender: UISwitch) {
+    
+        if sender.isOn {
+            print("User turned it on.")
+        } else {
+            print("Its now off.")
+        }
+        
+    }
+    
 }
