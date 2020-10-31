@@ -16,6 +16,7 @@ class ViewController: UIViewController {
         
         table.register(CustomTableViewCellWithImage.nib(), forCellReuseIdentifier: CustomTableViewCellWithImage.identifier)
         table.register(CustomTableViewCellWithField.nib(), forCellReuseIdentifier: CustomTableViewCellWithField.identifier)
+        table.register(CustomTableViewCellWithSwitch.nib(), forCellReuseIdentifier: CustomTableViewCellWithSwitch.identifier)
         
         table.delegate = self
         table.dataSource = self
@@ -42,29 +43,14 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             
             return customCell
         }
-
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = "Hello World \(indexPath.row+1)"
         
-        let mySwitch = UISwitch()
-        mySwitch.addTarget(self, action: #selector(didChangeSwitch(_:)), for: .valueChanged)
-        mySwitch.isOn = true
-        cell.accessoryView = mySwitch
-                
-        return cell
+        let switchCell = tableView.dequeueReusableCell(withIdentifier: CustomTableViewCellWithSwitch.identifier, for: indexPath) as! CustomTableViewCellWithSwitch
+        switchCell.configure(with: "Custom Cell with Switch", isOn: true)
+        
+        return switchCell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 70
     }
-    
-    @objc func didChangeSwitch(_ sender: UISwitch) {
-    
-        if sender.isOn {
-            print("User turned it on.")
-        } else {
-            print("Its now off.")
-        }
-    }
-    
 }

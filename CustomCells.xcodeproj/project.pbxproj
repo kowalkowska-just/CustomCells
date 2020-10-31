@@ -17,6 +17,8 @@
 		D1F8E33F254CABF200CCBB4D /* CustomTableViewCellWithImage.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1F8E33D254CABF200CCBB4D /* CustomTableViewCellWithImage.xib */; };
 		D1F8E343254CB61700CCBB4D /* CustomTableViewCellWithField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F8E341254CB61700CCBB4D /* CustomTableViewCellWithField.swift */; };
 		D1F8E344254CB61700CCBB4D /* CustomTableViewCellWithField.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1F8E342254CB61700CCBB4D /* CustomTableViewCellWithField.xib */; };
+		D1F8E348254CDB0600CCBB4D /* CustomTableViewCellWithSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F8E346254CDB0600CCBB4D /* CustomTableViewCellWithSwitch.swift */; };
+		D1F8E349254CDB0600CCBB4D /* CustomTableViewCellWithSwitch.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1F8E347254CDB0600CCBB4D /* CustomTableViewCellWithSwitch.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		D1F8E33D254CABF200CCBB4D /* CustomTableViewCellWithImage.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCellWithImage.xib; sourceTree = "<group>"; };
 		D1F8E341254CB61700CCBB4D /* CustomTableViewCellWithField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCellWithField.swift; sourceTree = "<group>"; };
 		D1F8E342254CB61700CCBB4D /* CustomTableViewCellWithField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCellWithField.xib; sourceTree = "<group>"; };
+		D1F8E346254CDB0600CCBB4D /* CustomTableViewCellWithSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCellWithSwitch.swift; sourceTree = "<group>"; };
+		D1F8E347254CDB0600CCBB4D /* CustomTableViewCellWithSwitch.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCellWithSwitch.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +79,8 @@
 				D1F8E33D254CABF200CCBB4D /* CustomTableViewCellWithImage.xib */,
 				D1F8E341254CB61700CCBB4D /* CustomTableViewCellWithField.swift */,
 				D1F8E342254CB61700CCBB4D /* CustomTableViewCellWithField.xib */,
+				D1F8E346254CDB0600CCBB4D /* CustomTableViewCellWithSwitch.swift */,
+				D1F8E347254CDB0600CCBB4D /* CustomTableViewCellWithSwitch.xib */,
 			);
 			path = CustomCells;
 			sourceTree = "<group>";
@@ -138,6 +144,7 @@
 			files = (
 				D1F8E33F254CABF200CCBB4D /* CustomTableViewCellWithImage.xib in Resources */,
 				D15E5C6A254C97AA002C6027 /* LaunchScreen.storyboard in Resources */,
+				D1F8E349254CDB0600CCBB4D /* CustomTableViewCellWithSwitch.xib in Resources */,
 				D1F8E344254CB61700CCBB4D /* CustomTableViewCellWithField.xib in Resources */,
 				D15E5C67254C97AA002C6027 /* Assets.xcassets in Resources */,
 				D15E5C65254C97A9002C6027 /* Main.storyboard in Resources */,
@@ -154,6 +161,7 @@
 				D15E5C62254C97A9002C6027 /* ViewController.swift in Sources */,
 				D15E5C5E254C97A9002C6027 /* AppDelegate.swift in Sources */,
 				D1F8E33E254CABF200CCBB4D /* CustomTableViewCellWithImage.swift in Sources */,
+				D1F8E348254CDB0600CCBB4D /* CustomTableViewCellWithSwitch.swift in Sources */,
 				D15E5C60254C97A9002C6027 /* SceneDelegate.swift in Sources */,
 				D1F8E343254CB61700CCBB4D /* CustomTableViewCellWithField.swift in Sources */,
 			);
